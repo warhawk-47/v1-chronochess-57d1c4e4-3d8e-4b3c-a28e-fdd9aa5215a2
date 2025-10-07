@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --retro-dark: 44 42 74;
+    --retro-light: 220 210 255;
+    --retro-neon-cyan: 0 246 255;
+    --retro-neon-pink: 255 0 255;
+    --background: 248 11% 15%; /* A slightly lighter shade of retro-dark */
+    --foreground: 240 14% 86%;
+    --primary: 181 100% 50%; /* neon-cyan */
+    --primary-foreground: 248 11% 15%;
+    --muted: 248 11% 25%;
+    --muted-foreground: 240 14% 66%;
+    --border: 248 11% 30%;
+    --ring: 181 100% 50%;
+    --card: 248 11% 18%;
+    --card-foreground: 240 14% 86%;
+    --popover: 248 11% 18%;
+    --popover-foreground: 240 14% 86%;
+    --secondary: 300 100% 50%; /* neon-pink */
+    --secondary-foreground: 248 11% 15%;
+    --accent: 248 11% 25%;
+    --accent-foreground: 240 14% 96%;
+    --destructive: 300 100% 50%;
+    --destructive-foreground: 240 14% 96%;
+    --input: 248 11% 30%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    /* Dark theme is the default, so no changes needed here */
+  }
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    @apply bg-retro-dark text-retro-light;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    text-rendering: optimizeLegibility;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%232c2a4a' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  }
+}
